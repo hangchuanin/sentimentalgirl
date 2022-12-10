@@ -9,10 +9,12 @@
 # 编译
 
 ```
-set GO111MODULE=off
-go get github.com/fatih/color
-set GOOS=windows
-go build main.go
+set GO111MODULE=on
+set GOPROXY=https://mirrors.aliyun.com/goproxy/
+cd %GOPATH%/src
+git clone https://github.com/hangchuanin/sentimentalgirl.git
+cd sentimentalgirl
+go build -ldflags "-s -w"
 ```
 
 # 使用
